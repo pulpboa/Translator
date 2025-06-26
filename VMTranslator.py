@@ -239,45 +239,45 @@ def translate_return():
         "@LCL",
         "D=M",
         "@R13",
-        "M=D",      # FRAME = LCL
+        "M=D",      
         "@5",
         "A=D-A",
         "D=M",
         "@R14",
-        "M=D",      # RET = *(FRAME-5)
+        "M=D",      
         "@SP",
         "AM=M-1",
         "D=M",
         "@ARG",
         "A=M",
-        "M=D",      # *ARG = pop()
+        "M=D",     
         "@ARG",
         "D=M+1",
         "@SP",
-        "M=D",      # SP = ARG+1
+        "M=D",     
         "@R13",
         "AM=M-1",
         "D=M",
         "@THAT",
-        "M=D",      # THAT = *(FRAME-1)
+        "M=D",      
         "@R13",
         "AM=M-1",
         "D=M",
         "@THIS",
-        "M=D",      # THIS = *(FRAME-2)
+        "M=D",     
         "@R13",
         "AM=M-1",
         "D=M",
         "@ARG",
-        "M=D",      # ARG = *(FRAME-3)
+        "M=D",      
         "@R13",
         "AM=M-1",
         "D=M",
         "@LCL",
-        "M=D",      # LCL = *(FRAME-4)
+        "M=D",      
         "@R14",
         "A=M",
-        "0;JMP"     # goto RET
+        "0;JMP"   
     ]
 
 def translate(vm_file, file_name):
